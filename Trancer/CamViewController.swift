@@ -288,7 +288,7 @@ print(defaults.integer(forKey: "hasRun"))
      func setupDevice() {
        guard let capDevice = AVCaptureDevice.default(for: .video) else {return}
         guard let input = try? AVCaptureDeviceInput(device: capDevice) else {return}
-        session.sessionPreset = .low
+        session.sessionPreset = .hd1920x1080
         session.addInput(input)
         session.startRunning()
         let dataOutput = AVCaptureVideoDataOutput()
@@ -300,11 +300,11 @@ print(defaults.integer(forKey: "hasRun"))
      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
     func getFrontCamera() -> AVCaptureDevice?{
-        session.sessionPreset = AVCaptureSession.Preset.low
+        session.sessionPreset = AVCaptureSession.Preset.hd1920x1080
            return AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .front).devices.first
               }
       func getBackCamera() -> AVCaptureDevice?{
-        session.sessionPreset = AVCaptureSession.Preset.low
+        session.sessionPreset = AVCaptureSession.Preset.hd1920x1080
            return AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back).devices.first
         }
        var usingFrontCamera = false
