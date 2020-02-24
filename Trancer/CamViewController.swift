@@ -255,11 +255,11 @@ print(defaults.integer(forKey: "hasRun"))
        var rec = false
        @objc fileprivate func play(){
                      // print(getFreeSpace())
-                 // let vie = ViewContent()
-                  //    vie.modalPresentationStyle = .overFullScreen
-                 // vie.view.backgroundColor = UIColor.black.withAlphaComponent(0.2)
-                  //       present(vie, animated: true, completion: nil)
-                         clearCache()
+                  let vie = ViewContent()
+                      vie.modalPresentationStyle = .overFullScreen
+                  //vie.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+                         present(vie, animated: true, completion: nil)
+                        // clearCache()
                      }
        
        
